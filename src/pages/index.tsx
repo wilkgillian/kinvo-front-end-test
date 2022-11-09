@@ -19,13 +19,10 @@ export default function Home() {
       <Head>
         <title>KinvoApp</title>
       </Head>
-      <Box w="100%" h="100vh" bg="gray.800">
+      <Box w="100%" h="100vh" bg="gray.900">
         <Header />
+        <Dashboard />
       </Box>
-      {/*
-      <Box>
-      <Dashboard/>
-      </Box> */}
     </ChakraProvider>
   );
 }

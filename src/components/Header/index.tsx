@@ -12,8 +12,8 @@ export function Header() {
       height={90}
       padding="30px 40px"
       width="100%"
-      bg="gray.600"
-      borderBottom="1px solid gray.900"
+      bg="gray.900"
+      borderBottom="1px solid gray.700"
     >
       <Box as="a" cursor="pointer">
         <Image src={'./assets/logoBorda.svg'} alt="logo" />

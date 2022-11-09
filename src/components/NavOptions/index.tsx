@@ -29,10 +29,15 @@ export default function Infos({
         {children}
       </Box>
       <Box>
-        <Text fontWeight="thin" fontSize={8} textTransform="uppercase">
+        <Text
+          fontWeight="thin"
+          color="gray.100"
+          fontSize={8}
+          textTransform="uppercase"
+        >
           {title}
         </Text>
-        <Text fontWeight="bold" fontSize={16}>
+        <Text fontWeight="bold" color="gray.400" fontSize={16}>
           {value}
         </Text>
       </Box>
