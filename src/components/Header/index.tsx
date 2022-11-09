@@ -1,4 +1,5 @@
-import { Box, Text, Image } from '@chakra-ui/react';
+import { Box, Image, HStack } from '@chakra-ui/react';
+import Infos from '../NavOptions';
 
 export function Header() {
   return (
@@ -6,118 +7,43 @@ export function Header() {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
-      margin={0}
-      border={0}
-      padding={0}
-      height={'90px'}
-      width={'100vw'}
-      bg="#FFFFFF"
-      borderBottom="1px solid gray"
+      margin="auto"
+      maxW={1366}
+      height={90}
+      padding="30px 40px"
+      width="100%"
+      bg="gray.600"
+      borderBottom="1px solid gray.900"
     >
-      <Box ml={6} cursor="pointer">
-        <Image src={'./assets/logo.svg'} />
+      <Box as="a" cursor="pointer">
+        <Image src={'./assets/logoBorda.svg'} alt="logo" />
       </Box>
-      <Box w={784} display="flex" justifyContent="space-between" mr={12}>
-        <Box mr={6} display="flex">
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            borderRadius={50}
-            w="30px"
-            h="30px"
-            bg="#DAE0E3"
-          >
-            <Image src={'./assets/saldo.svg'} />
-          </Box>
-
-          <Box color="#707B81" ml={2} h="30px">
-            <Text fontSize="8px">SALDO BRUTO</Text>
-            <Text mt={-1} fontSize="16px" fontWeight="bold">
-              130.521.230,02
-            </Text>
-          </Box>
-        </Box>
-        <Box mr={6} display="flex">
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            borderRadius={50}
-            w="30px"
-            h="30px"
-            bg="#DAE0E3"
-          >
-            <Image src={'./assets/arrowUp.svg'} />
-          </Box>
-
-          <Box color="#707B81" ml={2} h="30px">
-            <Text fontSize="8px">VALOR APLICADO</Text>
-            <Text mt={-1} fontSize="16px" fontWeight="bold">
-              521.230,02
-            </Text>
-          </Box>
-        </Box>
-        <Box mr={6} display="flex">
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            borderRadius={50}
-            w="30px"
-            h="30px"
-            bg="#DAE0E3"
-          >
-            <Image src={'./assets/rentabilidade.svg'} />
-          </Box>
-
-          <Box color="#707B81" ml={2} h="30px">
-            <Text fontSize="8px">RENTABILIDADE</Text>
-            <Text mt={-1} fontSize="16px" fontWeight="bold">
-              2,34%
-            </Text>
-          </Box>
-        </Box>
-        <Box mr={6} display="flex">
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            borderRadius={50}
-            w="30px"
-            h="30px"
-            bg="#5D41AC"
-            cursor="pointer"
-          >
-            <Image mt={-1} src={'./assets/chevronDown.svg'} />
-          </Box>
-
-          <Box color="#707B81" ml={2} h="30px">
-            <Text fontWeight="medium" fontSize="8px">
-              CARTEIRA
-            </Text>
-            <Text mt={-1} fontSize="16px" fontWeight="bold">
-              Minha Carteira
-            </Text>
-          </Box>
-        </Box>
+      <HStack w="70%" gap={5} justifyContent="flex-end">
+        <Infos color="Gray" title="saldo bruto" value="130.521.230,02">
+          <Image src={'./assets/saldo.svg'} alt="saldo" h="15px" />
+        </Infos>
+        <Infos color="Gray" title="Valor aplicado" value="521.230,02">
+          <Image src={'./assets/arrowup.svg'} alt="arrowup" h="15px" />
+        </Infos>
+        <Infos color="Gray" title="Rentabiliade" value="2,34%">
+          <Image src={'./assets/rentabilidade.svg'} alt="arrowDown" h="15px" />
+        </Infos>
+        <Infos color="Grape" title="Carteira" value="Minha Carteira">
+          <Image src={'./assets/chevronDown.svg'} alt="arrowDown" h="15px" />
+        </Infos>
         <Box
-          cursor="pointer"
+          as="button"
+          borderRadius={50}
+          h={30}
+          w={30}
+          bg="#5D41AC"
           display="flex"
           alignItems="center"
           justifyContent="center"
-          borderRadius={50}
-          w="30px"
-          h="30px"
-          bg="#5D41AC"
         >
-          <Image
-            src={'./assets/hamburguer.svg'}
-            fontSize="14px"
-            color="white"
-          />
+          <Image src={'./assets/hamburguer.svg'} alt="hamburguer" h="12px" />
         </Box>
-      </Box>
+      </HStack>
     </Box>
   );
 }
